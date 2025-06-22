@@ -1,0 +1,26 @@
+if SHIELD_GARDEN36_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "garden36"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_GARDEN36_LEFT || SHIELD_GARDEN36_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
+
+if ZMK_DISPLAY
+
+config I2C
+    default y
+
+config SSD1306
+    default y
+
+endif # ZMK_DISPLAY

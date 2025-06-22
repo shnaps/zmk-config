@@ -19,7 +19,9 @@
 #
 ---
 include:
-  - board: nrfmicro_13
-    shield: cradio_left
-  - board: nrfmicro_13
-    shield: cradio_right
+  - board: nice_nano_v2
+    shield: garden36_left
+  - board: nice_nano_v2
+    shield: garden36_right
+  - board: nice_nano_v2
+    shield: settings_reset
