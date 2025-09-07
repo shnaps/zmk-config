@@ -3,17 +3,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-               default_layer {
-			    label = "Base";
-			    bindings = <
-			    &kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
-			    &kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp IT_OGRV
-			    &kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp IT_UGRV
-					&mo EXT	&mo EXT &qt LSHIFT SPACE    &mo EXT &kp SPACE &sl SYM
-			    >;
-            };
+        default_layer { // Layer 0
+             bindings = <
+   					&kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
+   					&kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp Q
+   					&kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp Q 
+                  				&kp Q &kp Q &kp Q   &kp SPACE   &kp SPACE  &kp SPACE
+                        >;
         };
-};
+    };
+ };
