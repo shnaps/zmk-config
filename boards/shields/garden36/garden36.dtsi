@@ -1,4 +1,4 @@
-#include <garden36-layouts.dtsi>
+#include <physical_layouts.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 
  / {
@@ -23,6 +23,52 @@
             RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)     RC(6,9) RC(6,8) RC(6,7) RC(6,6) RC(6,5)
                             RC(3,2) RC(3,3) RC(3,4)     RC(7,9) RC(7,8) RC(7,7)
         >;
+    };
+     physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0  126       0     0     0>
+            , <&key_physical_attrs 100 100  100   50       0     0     0>
+            , <&key_physical_attrs 100 100  200    0       0     0     0>
+            , <&key_physical_attrs 100 100  300   38       0     0     0>
+            , <&key_physical_attrs 100 100  400   86       0     0     0>
+            , <&key_physical_attrs 100 100    0  226       0     0     0>
+            , <&key_physical_attrs 100 100  100  150       0     0     0>
+            , <&key_physical_attrs 100 100  200  100       0     0     0>
+            , <&key_physical_attrs 100 100  300  138       0     0     0>
+            , <&key_physical_attrs 100 100  400  186       0     0     0>
+            , <&key_physical_attrs 100 100    0  326       0     0     0>
+            , <&key_physical_attrs 100 100  100  250       0     0     0>
+            , <&key_physical_attrs 100 100  200  200       0     0     0>
+            , <&key_physical_attrs 100 100  300  238       0     0     0>
+            , <&key_physical_attrs 100 100  400  286       0     0     0>
+            , <&key_physical_attrs 100 100  295  387    1000   345   437>
+            , <&key_physical_attrs 100 100  400  415    2000   450   465>
+            , <&key_physical_attrs 100 100  501  348    2500   551   398>
+            , <&key_physical_attrs 100 100 1173  126       0     0     0>
+            , <&key_physical_attrs 100 100 1073   50       0     0     0>
+            , <&key_physical_attrs 100 100  973    0       0     0     0>
+            , <&key_physical_attrs 100 100  873   38       0     0     0>
+            , <&key_physical_attrs 100 100  773   86       0     0     0>
+            , <&key_physical_attrs 100 100 1173  226       0     0     0>
+            , <&key_physical_attrs 100 100 1073  150       0     0     0>
+            , <&key_physical_attrs 100 100  973  100       0     0     0>
+            , <&key_physical_attrs 100 100  873  138       0     0     0>
+            , <&key_physical_attrs 100 100  773  186       0     0     0>
+            , <&key_physical_attrs 100 100 1173  326       0     0     0>
+            , <&key_physical_attrs 100 100 1073  250       0     0     0>
+            , <&key_physical_attrs 100 100  973  200       0     0     0>
+            , <&key_physical_attrs 100 100  873  238       0     0     0>
+            , <&key_physical_attrs 100 100  773  286       0     0     0>
+            , <&key_physical_attrs 100 100  878  387 (-1000)   928   437>
+            , <&key_physical_attrs 100 100  773  415 (-2000)   823   465>
+            , <&key_physical_attrs 100 100  672  348 (-2500)   722   398>
+            ;
     };
 
     kscan0: kscan0 {
