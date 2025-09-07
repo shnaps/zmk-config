@@ -1,15 +1,16 @@
 #include <dt-bindings/zmk/matrix_transform.h>
- 
+#include <garden36-layout.dtsi>
+
  / {
      chosen {
          zmk,kscan            = &kscan0;
-         zmk,matrix-transform = &default_transform;
+         zmk,physical-layout  = &physical_layout0;
      };
      
     default_transform: keymap_transform_0 {
          compatible = "zmk,matrix-transform";
          columns    = <10>;
-         rows       = <4>;
+         rows       = <8>;
     
          // | SW1  | SW2  | SW3  | SW4  | SW5  |   | SW15 | SW11 | SW7  | SW4  | SW1  |
          // | SW6  | SW7  | SW8  | SW9  | SW10 |   | SW16 | SW12 | SW8  | SW5  | SW2  |
