@@ -1,5 +1,5 @@
-#include <dt-bindings/zmk/matrix_transform.h>
 #include <garden36-layouts.dtsi>
+#include <dt-bindings/zmk/matrix_transform.h>
 
  / {
      chosen {
