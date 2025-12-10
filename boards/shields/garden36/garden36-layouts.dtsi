@@ -1,6 +1,7 @@
 #include <physical_layouts.dtsi>
 
- / physical_layout0: physical_layout_0 {
+/ {
+    physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Default";
 
@@ -43,3 +44,4 @@
             , <&key_physical_attrs 100 100  878  387 (-1000)   928   437>
             ;
     };
+}
