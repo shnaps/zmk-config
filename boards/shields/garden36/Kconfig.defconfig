@@ -3,6 +3,9 @@ if SHIELD_GARDEN36_LEFT
 config ZMK_KEYBOARD_NAME
     default "garden36"
 
+config ZMK_WPM
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
