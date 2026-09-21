@@ -1,0 +1,224 @@
+layout: {zmk_keyboard: garden36}
+layers:
+  Base:
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - A
+  - R
+  - S
+  - T
+  - G
+  - M
+  - N
+  - E
+  - I
+  - O
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: '?', s: '!'}
+  - Cmd
+  - Num
+  - {t: LSHFT, h: sticky, s: Caps Word}
+  - SPACE
+  - Nav
+  - RET
+  Game:
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LSHFT
+  - A
+  - S
+  - D
+  - F
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LCTRL
+  - Z
+  - X
+  - C
+  - V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ESC
+  - {t: ▽, type: trans}
+  - SPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Base, h: toggle}
+  Num:
+  - '~'
+  - '@'
+  - '{'
+  - '}'
+  - '%'
+  - '*'
+  - '7'
+  - '8'
+  - '9'
+  - '-'
+  - ^
+  - '#'
+  - (
+  - )
+  - $
+  - _
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - {t: '&', s: '|'}
+  - <
+  - '['
+  - ']'
+  - '>'
+  - {t: /, s: \}
+  - '1'
+  - '2'
+  - '3'
+  - '='
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Nav:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DEL
+  - HOME
+  - END
+  - TAB
+  - {t: BACKSPACE, s: DELETE}
+  - {t: LSHFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: ESC, s: '`'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RET
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  Fun:
+  - {t: Game, h: toggle}
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - OUT USB
+  - {t: Studio, s: unlock}
+  - F7
+  - F8
+  - F9
+  - F12
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - BOOT
+  - F4
+  - F5
+  - F6
+  - F11
+  - BT CLR
+  - PREV
+  - PP
+  - NEXT
+  - OUT BLE
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F10
+  - BOOT
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  Cmd:
+  - Gui+Q
+  - Gui+W
+  - Gui+F
+  - Gui+P
+  - Gui+B
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - Gui+G
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+D
+  - Gui+V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}

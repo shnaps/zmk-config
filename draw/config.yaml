@@ -1,0 +1,11 @@
+draw_config:
+  dark_mode: auto
+  n_columns: 2
+  draw_key_sides: false
+  append_colon_to_layer_header: false
+  key_w: 62.0
+  key_h: 62.0
+  split_gap: 40.0
+  outer_pad_w: 40.0
+  outer_pad_h: 50.0
+  footer_text: "garden36 · 36-key split · Colemak-DH"
