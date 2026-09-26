@@ -3,7 +3,7 @@
 [![Build ZMK firmware](https://github.com/shnaps/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/shnaps/zmk-config/actions/workflows/build.yml)
 
 ZMK firmware for the [garden36](https://github.com/shnaps/garden36), a 36-key wireless split keyboard.
-Each half runs a nice!nano v2 with a nice!view display.
+Each half runs a nice!nano v2 with a nice!view display. The screen comes from [zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-oled).
 The base layer is Colemak-DH.
 
 <img src="draw/garden36.svg" alt="garden36 keymap, all layers" width="100%" />
@@ -37,8 +37,8 @@ The left inner thumb (`&smart_shft`) is a sticky Shift for the next key. Tap it 
 GitHub Actions builds on every push (`.github/workflows/build.yml`, targets in `build.yaml`).
 Download the `firmware` artifact from the run. It holds 3 files:
 
-- `garden36_left nice_view_adapter nice_view-nice_nano_v2-zmk.uf2`: the left half. It is the central, so it connects to the computer and runs ZMK Studio.
-- `garden36_right nice_view_adapter nice_view-nice_nano_v2-zmk.uf2`: the right half.
+- `garden36_left nice_view_adapter nice_epaper-nice_nano_v2-zmk.uf2`: the left half. It is the central, so it connects to the computer and runs ZMK Studio.
+- `garden36_right nice_view_adapter nice_epaper-nice_nano_v2-zmk.uf2`: the right half.
 - `settings_reset-nice_nano_v2-zmk.uf2`: clears pairings and saved settings.
 
 ZMK is pinned to `v0.3` in `config/west.yml`.
