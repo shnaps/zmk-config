@@ -10,11 +10,12 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define GAME 1
-#define NUM 2
-#define NAV 3
-#define FUN 4
-#define CMD 5
+#define RU 1
+#define GAME 2
+#define NUM 3
+#define NAV 4
+#define FUN 5
+#define CMD 6
 
 # define ______ &trans
 
@@ -24,6 +25,45 @@
         tri_layer {
             if-layers = <NUM NAV>;
             then-layer = <FUN>;
+        };
+    };
+    // Russian letters that do not fit the 3x10 grid. Vertical pairs, so fast
+    // typing on one row does not trigger them. Keycodes follow the Windows
+    // Russian (ЙЦУКЕН) layout.
+    combos {
+        compatible = "zmk,combos";
+        combo_ru_kha {
+            timeout-ms = <50>;
+            key-positions = <9 19>;     // з + ж
+            bindings = <&kp LBKT>;      // х
+            layers = <RU>;
+        };
+        combo_ru_hard_sign {
+            timeout-ms = <50>;
+            key-positions = <8 18>;     // щ + д
+            bindings = <&kp RBKT>;      // ъ
+            layers = <RU>;
+        };
+        combo_ru_e {
+            timeout-ms = <50>;
+            key-positions = <19 29>;    // ж + .
+            bindings = <&kp SQT>;       // э
+            layers = <RU>;
+        };
+        combo_ru_yo {
+            timeout-ms = <50>;
+            key-positions = <4 14>;     // е + п
+            bindings = <&kp GRAVE>;     // ё
+            layers = <RU>;
+        };
+    };
+    macros {
+        // Switch the Windows input language and the Ru layer together.
+        // Win+Space moves to the next language, so keep exactly two installed.
+        lang_switch: lang_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE)>, <&tog RU>;
         };
     };
     behaviors {
@@ -90,6 +130,23 @@
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
+                ru_layer {
+                        display-name = "Ru";
+                        bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
+//         й             ц             у             к             е                 н             г             ш             щ             з
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L        &kp SEMI
+//         ф             ы             в             а             п                 р             о             л             д             ж
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA      &kp DOT       &kp FSLH
+//         я             ч             с             м             и                 т             ь             б             ю           . (,)
+// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
+                                    ______        ______        ______            ______        ______        ______
+//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+                        >;
+                };
                 game_layer {
                         display-name = "Game";
                         bindings = <
@@ -123,7 +180,7 @@
                         display-name = "Nav";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        ______        ______        ______        ______        ______           &kp DEL       &kp HOME      &kp END       &kp TAB      &bspc_del
+        ______        ______        ______     &lang_switch     ______           &kp DEL       &kp HOME      &kp END       &kp TAB      &bspc_del
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &sk LSHFT     &sk LCTRL      &sk LALT      &sk LGUI       ______           &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT       &gresc
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤

@@ -14,7 +14,8 @@ The base layer is Colemak-DH.
 |---|---|---|
 | Base | Default | Colemak-DH letters, punctuation, Space, Enter |
 | Num | Hold the left middle thumb | Numpad on the right, brackets and symbols on the left |
-| Nav | Hold the right middle thumb | Arrows, Home, End, Tab, Backspace/Delete, sticky mods on the left |
+| Ru | Tap LANG on Nav (left index, top row) | Russian ЙЦУКЕН on the 30 letter keys. х ъ э ё are combos, shown in the image. LANG also sends Win+Space, so Windows switches language at the same time |
+| Nav | Hold the right middle thumb | Arrows, Home, End, Tab, Backspace/Delete, sticky mods and LANG on the left |
 | Fun | Hold both middle thumbs | F1–F12, media, Bluetooth profiles, USB/BLE output, bootloader, Studio unlock |
 | Cmd | Hold the left outer thumb | Cmd+letter shortcuts on the left, plain mods on the home row |
 | Game | Tap the top-left key on Fun | WASD block with Shift and Ctrl on the left. Tap the right outer thumb to leave |
@@ -65,7 +66,7 @@ It needs [uv](https://docs.astral.sh/uv/). Run it after each keymap change and c
 
 | Path | Contents |
 |---|---|
-| `config/garden36.keymap` | Layers and behaviors |
+| `config/garden36.keymap` | Layers, combos, macros and behaviors |
 | `config/garden36.conf` | Settings for both halves |
 | `config/garden36_left.conf` | Settings for the left half only: Studio, battery reporting |
 | `boards/shields/garden36/` | Shield definition: matrix pins, physical layout |

@@ -37,6 +37,43 @@ layers:
   - SPACE
   - Nav
   - RET
+  Ru:
+  - й
+  - ц
+  - у
+  - к
+  - е
+  - н
+  - г
+  - ш
+  - щ
+  - з
+  - ф
+  - ы
+  - в
+  - а
+  - п
+  - р
+  - о
+  - л
+  - д
+  - ж
+  - я
+  - ч
+  - с
+  - м
+  - и
+  - т
+  - ь
+  - б
+  - ю
+  - {t: ., s: ','}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Game:
   - TAB
   - Q
@@ -115,7 +152,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: LANG, s: EN/RU}
   - {t: ▽, type: trans}
   - DEL
   - HOME
@@ -222,3 +259,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [9, 19]
+  k: х
+  l: [Ru]
+- p: [8, 18]
+  k: ъ
+  l: [Ru]
+- p: [19, 29]
+  k: э
+  l: [Ru]
+- p: [4, 14]
+  k: ё
+  l: [Ru]
